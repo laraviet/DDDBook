@@ -4,7 +4,7 @@ namespace Laraviet\DDDBook\Book\Persistence;
 
 use Illuminate\Cache\Repository as Cache;
 use Laraviet\DDDBook\Book\Domain\Repositories\BookRepositoryInterface;
-use Laraviet\DDDCore\Book\Persistence\Cache\BaseRepository;
+use Laraviet\DDDCore\Persistence\Cache\BaseRepository;
 
 class BookCacheRepository extends BaseRepository implements BookRepositoryInterface
 {

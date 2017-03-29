@@ -2,7 +2,7 @@
 
 namespace Laraviet\DDDBook\Book\Domain\Entities;
 
-use Laraviet\DDDCore\Book\Domain\Entities\AbstractEntity;
+use Laraviet\DDDCore\Domain\Entities\AbstractEntity;
 
 class User extends AbstractEntity
 {
