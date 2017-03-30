@@ -39,5 +39,7 @@ class DDDBookServiceProvider extends ServiceProvider
             // return $bookRepo;
             return new BookCacheRepository($bookRepo, $this->app['cache.store']);
         });
+
+        $this->app->register(Laraviet\DDDCore\DDDCoreServiceProvider::class);
     }
 }
