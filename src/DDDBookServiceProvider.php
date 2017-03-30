@@ -4,6 +4,7 @@ namespace Laraviet\DDDBook;
 
 
 use Illuminate\Support\ServiceProvider;
+use Laraviet\DDDCore\DDDCoreServiceProvider;
 use Laraviet\DDDBook\Book\Domain\Entities\Book;
 use Laraviet\DDDBook\Book\Domain\Services\BookService;
 use Laraviet\DDDBook\Book\Persistence\BookCacheRepository;
@@ -40,6 +41,6 @@ class DDDBookServiceProvider extends ServiceProvider
             return new BookCacheRepository($bookRepo, $this->app['cache.store']);
         });
 
-        $this->app->register(Laraviet\DDDCore\DDDCoreServiceProvider::class);
+        $this->app->register(DDDCoreServiceProvider::class);
     }
 }
