@@ -2,17 +2,15 @@
 
 namespace Laraviet\DDDBook\Book\Persistence;
 
-use Laraviet\DDDBook\Book\Persistence\Models\Book;
-use Laraviet\DDDBook\Book\Domain\Repositories\BookRepositoryInterface;
-use Laraviet\DDDCore\Domain\Entities\AbstractEntity;
+use Laraviet\DDDCore\Domain\Entities\BaseModel;
 use Laraviet\DDDCore\Persistence\Eloquent\BaseRepository;
+use Laraviet\DDDBook\Book\Domain\Repositories\BookRepositoryInterface;
 
 class BookEloquentRepository extends BaseRepository implements BookRepositoryInterface
 {
 
-    public function __construct(AbstractEntity $entity, Book $model)
+    public function __construct(BaseModel $model)
     {
-        $this->entity = $entity;
         $this->model = $model;
     }
 
